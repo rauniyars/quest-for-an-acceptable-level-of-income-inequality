@@ -1,0 +1,397 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This document provides a sample senior 
+% thesis proposal template for use
+% by Allegheny's Computer Science majors.
+%
+% This template was adopted from Jeremie Gillet
+% Ref: https://github.com/oist/LaTeX-templates
+%
+% Author: Janyl Jumadinova
+% Last Updated: September 10, 2019
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt,oneside]{book} % 12 pt font, one-sided book style
+\usepackage[a4paper, includehead, headheight=0.6cm, inner=3cm ,outer=2.5cm, top=2.5 cm, bottom=2.5cm]{geometry}  % Changing size of document
+\usepackage[english]{babel} % The document is in English
+\usepackage[utf8]{inputenc} % UTF8 encoding
+\usepackage[T1]{fontenc} % Font encoding
+\setlength{\parskip}{1em}
+\usepackage{graphicx} % For including images
+\graphicspath{{./images/}} % Specifies the directory where images are stored
+
+\usepackage{longtable} % tables that can span several pages
+\usepackage[bf]{caption} % caption: FIG in bold
+\usepackage{fancyhdr} % For the headers
+
+
+
+\newcommand{\numberedchapter}{ % Preparation for numbered chapters
+	\cleardoublepage % To make sure the previous headers are passed
+	\fancyhead[RE]{{\bfseries \leftmark}}% Headers for left pages
+	\fancyhead[LO]{{\bfseries \rightmark}}}% Headers for right pages
+\newcommand{\unnumberedchapter}[1]{ % Preparation for unnumbered chapters
+	\cleardoublepage % To make sure the previous headers are passed
+	\addcontentsline{toc}{chapter}{#1} % Also adds the chapter name to the Contents
+	\fancyhead[RE]{{\bfseries #1}} % Headers for left pages
+	\fancyhead[LO]{}}%Headers for right pages
+
+\usepackage{emptypage} % No headers on an empty page
+
+\usepackage{eso-pic} % For the background picture on the title page
+\newcommand\BackgroundPic{%
+\put(0,-120){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=5in]{images/logo}%
+\vfill
+}}}
+
+
+\usepackage{hyperref} % Adds clickable links at references
+
+%----------------------------------------------------------------------------------------
+%	ADD YOUR CUSTOM VALUES, COMMANDS AND PACKAGES
+%----------------------------------------------------------------------------------------
+
+% Open preamble/mydefinitions.tex and enter some values (name, thesis title...) 
+% and include your own custom LaTeX functions and packages
+
+\input{preamble/mydefinitions}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\pagestyle{empty} % No page numbers
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the preamble pages
+
+\begin{titlepage}
+\AddToShipoutPicture*{\BackgroundPic}
+\begin{center}
+\vfill
+{\large \scshape Allegheny College \\ Department of Computer Science }\\[1.4cm]
+{\Large Senior Thesis Proposal}\\[0.5cm]
+\rule{\textwidth}{1.5pt}\\[0cm]
+{\huge \bfseries \thesistitle \par \ }\\[-0.5cm]
+\rule{\textwidth}{1.5pt}\\[2.5cm]
+\hfill  by\\[1cm]
+\hfill  {\large \bfseries\name}\\
+\vfill
+{\hfill \large Project Supervisor: \textbf{\supervisor}} \\ 
+\ifx\cosupervisor\undefined\else{\hfill \large Co-Supervisor: \textbf{\cosupervisor}} \\ \fi
+\vspace{1cm}
+\hfill  \submissiondate
+\end{center}
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	PREAMBLE PAGES (comment out unnecessary pages)
+%----------------------------------------------------------------------------------------
+
+\pagestyle{fancy} % Changes the headers
+\fancyhf{}% Clears header and footer
+\fancyhead[RO,LE]{\thepage} % page number on the outside of headers
+
+\input{preamble/abstract}
+\renewcommand{\thesection}{\arabic{section}}
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+%----------------------------------------------------------------------------------------
+%	DELETE TEXT
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+% STOP DELETE
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+\label{sec:introduction}
+
+\emph{“It's difficult to cross from one economic class to another. You'll drown in champagne.”}
+
+\hspace{20pt}In today's time, technology has become embedded in our day-to-day activities and businesses. As it changes the way we access information, consumer products, travel, and communicate, it helps us achieve the so-called impossible and makes our lives convenient. It has also changed the model of work. Both developed and developing economies have made transitions from agricultural to industrial and from service to digitalization. The essence of all of these revolutions that humankind has seen lies within the realms of automation. Emerging technologies, including artificial intelligence, machine learning, and advanced robotics, can automate many tasks currently performed by workers, leading us to a quiet revolution, the Automation Revolution \cite{tobenkin_2019}.
+
+There is much debate about where workplace automation will lead the economy, but observers tend to agree on one thing: The trend is only gaining momentum \cite{uzialko_2019}. Automation in infrastructure and development is no longer a luxury but rather a necessity for humankind to thrive. As firms adopt new methods of production, markets expand, and societies evolve. Economies have continued to grow, and while many will benefit, that growth will not be costless. Some arguments say automation will take away jobs, but the advancements in automation do not eliminate jobs but instead create a "shift" reducing particular job functions at which humans are inefficient or inconsistent or are exposed to risk \cite{tobenkin_2019}. Workers in some sectors benefit handsomely from technological progress, whereas those in others are displaced and have to retool to survive \cite{sumagaysay_2019}. One of the dramatic changes in society because of such technological progress is Skill-Biased Technological Change (SBTC).
+
+\subsection{Skill-Biased Technological Change}
+The recent consensus is that skill-biased technological change favors more skilled workers, replaces tasks previously performed by the unskilled, and exacerbates inequality \cite{acemoglu2002technical}. Countries worldwide have undergone structural changes and although these changes contribute to rapid growth, leaning towards highly skilled workers puts the low-skilled workers at risk. Another reason for the increase in demand for high-skilled labor is trade \cite{kang2002technological}. The growing interdependence between economies resulting from globalization has created a worldwide market for companies and consumers to benefit. However, the general complaint about globalization is that it has made the rich richer while making the poor poorer \cite{collins_2015}. With all these changes that foster the world's economic progress and contribute to the wage gap between the rich and the poor at the same time, the question becomes, "What level of inequality is acceptable, and when does it start doing harm?" It is not acceptable to turn a blind eye to these changes, and this project aims to spark light on this issue by doing a comparative analysis between the developing countries and the developed countries and aims to understand the future of the world's economy.  
+
+\subsection{Skill-Biased Technological Change and Globalization within Economies}
+
+\hspace{20pt}The economic growth of a country is influenced by advanced technological changes and the rise in free trade. However, "Is the rise of the machine, the fall of the worker?." As businesses lean towards automation, the machines become more sophisticated, and such a change requires firms to hire high-skilled workers. Since this biased direction of technological change reduces the working capital's stock by substituting capital and unskilled labor with skilled workers, is this fair progress? Countries are using technologies to produce more in less time to match their increasing demands domestically and internationally. Advanced economies like the U.S and China who have a competitive advantage among many goods, have an increasing demand globally. As nations follow this incentive and produce more goods and services on a larger scale, they have a better chance of decreasing their costs and achieving economies of scale. Investments follow this trend of reduced costs that automate tasks as the goal is to "produce more in less time." Developing nations follow the same steps and integrate technological advancements to meet their local demands and open a gateway to foreign trade.
+
+On the bright side, SBTC and globalization bring economic prosperity to all the countries; however, the more countries experience such changes, the greater is the incentive and the potential to eliminate lower-level jobs and decrease the relative wages of the less-skilled workers. Another reason why this happens is that countries aim to achieve economies of scale by reducing their input costs. As a result, they have accumulated enough to invest this sum into a new resource; hence, the cycle continues. Critics argue that this is more of a “shift” in jobs rather than elimination. However, we fail to address that it is easier for the high-skilled workers to adjust to this change as they have access to resources to help them “catch up.” On the other hand, the low-skilled do not have the privilege to make a swift switch mostly because they do not have the resources like sufficient income to invest in their education, primarily why they had to work at a low-skilled job in the first place.
+
+Developed economies are insanely rich, and they could invest in their human capital to make their workers prepared for the transitions. Developing economies, who are still beginners in this game, do not seem to have the resources, and hence their workers are at a loss. Hence we could reiterate that "the rich keep getting richer, and the poor get poorer." Now the question is, what does this trend look like in the long-term for the world's economy? The purpose of this senior thesis is (1) to create an analytical model to understand what are the most important variables influencing SBTC and Globalization that drive income inequality (2) to derive insights from the existing patterns and use them to create a predictive model for the future, and (3) to finally use the insights that could be used to create better future models that emphasize how the current rate of income inequality is unacceptable, and it is high time that we shake the people in power to take actions against the injustice going on. The rise of the machine cannot be the fall of the worker.
+
+
+\section{Related Work}
+\label{sec:relatedwork}
+
+\hspace{20pt}The related work section will focus on the various scholarly research done to support the argument that Skill-Biased Technological Changes (SBTC) and Globalization contribute to an increasing wage inequality within developed countries and developing economies. These analyses help us discuss the similar approaches taken by these authors to study the factors affecting income inequality, and we aim to use their findings to create a basis for this senior project.
+
+\subsection{Evidence of Skill-Biased Technological Changes}
+
+\hspace{20pt}When economies are introduced to new technologies, there is a change in production methods or modifications in the organization of work. Hence, to have a smooth transition, firms turn towards more skilled labor.
+
+\hspace{20pt}In the research paper titled 'Skill-Biased Technology Transfer', authors Berman and Machin investigate the skill-bias of technological change in developing countries using a global sample of manufacturing industries \cite{berman2000skill}. The manufacturing industries undergo drastic structural changes as they transition to new forms of technology. In this paper, we turn back to the 1980s and find strong evidence of increased demand for skills in the 1980s in middle-income countries' manufacturing sectors. This analysis links this demand shift due to the skill-upgrading within industries. A cross-country correlation analysis was conducted for 37 countries with data (primarily from the United Nations General Industrial Statistics Database) on employment, wages, and production for manufacturing industries. The results showed that the demand for skills accelerated in the manufacturing industries of middle-income countries in the 1980s to a rate matching even that of high-income countries, concluding that skill-biased technological change exists, thus supporting the basis of this thesis \cite{berman2000skill}.
+
+In addition to an analysis focusing on multiple countries, it is also helpful to understand the situation between individual economies. Numerous studies focus on individual countries that help create an in-depth analysis of the impact of SBTC changes under various circumstances. India is preparing itself to compete with the leaders of industrialization and technological development. With this economic prosperity, there are also rising concerns about the increasing inequality within this fast-track nation. Kijima Yoko conducted a study to identify the major causes of changes in the wage structure in urban India during the 1980s and 1990 by conducting surveys that include information on an individual's earnings and the labor market characteristics \cite{kijima2006did}. The results showed that the demand for skilled workers grew faster than the supply of skilled labor, which raised the returns to skills, resulting in accelerated inequality in the 1990s. Another study by Esposito and Stehrer focuses on explaining relative demands for skills in Central and Eastern European countries. It presents the hypothesis that the sector bias of SBTC is essential in explaining the rising skill premium in three transition economies: Czech Republic, Hungary, and Poland \cite{esposito2009sector}. Another study investigating the existence of SBTC uses Ethiopia to study the effects of imported technology on manufacturing employment and concludes with similar remarks of biased effects \cite{haile2017imported}.
+
+The situation in some of the world's largest economies is not different. In an empirical analysis conducted by Cristiano and Franceso, the rate and direction of technological change in a significant sample of 12 major OECD countries in the years 1970–2003 confirm the strong bias of new technologies \cite{antonelli2010effects}. The study further supports another study's findings that the same country experiences different levels of economic growth at different periods, and these can be identified by the changes in the direction of technological change \cite{david2005tale}. New and convincing evidence has been provided recently about the strong skill-bias of the gales of technological change based upon information and communication technologies introduced in the last decades of the twenty-first century \cite{goldin2009race}. It has been a key driver in increasing the differences between people's earnings. Another model decomposes historical changes in earning differentials and uses it to construct forward-looking scenarios up to 2060. If the common cross-country trend of skill-biased technological change observed during the last 25 years prevails, earning differentials will increase by almost 30\% on average in the OECD (Organisation for Economic Co-operation and Development) by 2060 \cite{braconier_ruiz-valenzuela_2014}. 
+
+
+\subsection{Combining Skill-Biased Technological Change with Globalization}
+
+\hspace{20pt}The recent accelerations in the advancements of technology have also increased the globalization of production. Technology has revolutionized the global economy and has become a critical competitive strategy \cite{lamba2009role}. Through globalization, companies benefit from free trade, and consumers enjoy low prices. However, it has also created structural changes in the economy. The National Bureau of Economic Research states that trade influences what kind of technologies are more profitable to develop and creates a tendency for the price of skill-intensive products to increase. It provides firms with incentives to introduce new skill-biased technologies within their manufacturing processes. In other words, trade and globalization induce further skill-biased technological change \cite{acemoglu_2003}.
+
+Technology creates a sense of competitiveness that triggers a race to imitation and innovation for both firms and countries. Both firms can feel obligated to catch up with the technological trends in their production processes to ensure they are not lagging. However, they do so at the cost of a larger share of unskilled labor in their workforce. This argument is supported by a study conducted by Thoenig and Verdier, where they show that when globalization triggers an increased threat of technological leapfrogging or imitation, firms tend to respond to that threat by biasing the direction of their innovations towards skilled labor-intensive technologies \cite{thoenig2003theory}. Another finding is that there is a  growing international trade integration between advanced economies and low wage countries. According to standard Heckscher-Ohlin theory, it has shifted labor demand away from unskilled workers in high wage economies and eventually create a bias towards high education workers \cite{leamerheckscher}. To understand the consequences of this integration, they conduct their analysis in two regions, North-North and North-South, and conclude an increase of wage premium in both regions.
+
+Another study focuses on how lower-middle-income countries (LMIC) rely on international technology transfer to upgrade their technological sectors. In this analysis, a Generalized method of moments (GMM) technique is applied to a panel data constituting 0f 20 manufacturing sectors for 23 countries over a decade, and the results provide evidence of widening employment differentials. They introduce a new variable to overcome one of the challenges mentioned in their study: the absence of innovation and employment data in low- and middle-income countries. The results indicated a significant increase in demand for skilled workers upon imports of industrial machinery, equipment, and ICT (Information and Communication Technology) capital goods. Hence, the findings support this senior thesis's arguments that technological advancement and trade directly or indirectly impact the inequality within workers \cite{conte2011imported}.
+
+LMIC are not the only ones struggling. The results are prominent within developed economies where globalization drives economic growth. Innovation in such economies requires a significant amount of skilled labor, and this is an attractive feature for multinational corporations (MNC) who are willing to invest in these sectors. According to the 2019 World Investment Report, China was ranked the world's second-largest Foreign Direct Investment (FDI) recipient after the United States. In a study that performs regression analysis to firm-level data from the Chinese electronic industry, the findings show that despite the high adoption cost of technology, multinational firms' investments lead to higher productivity of skilled labor in developed economy subsidiaries than in the emerging economies \cite{li2010multinational}. The study concludes by reiterating the point mentioned above that innovation in developed economies favors skilled labor. It is more costly for MNCs of developed economies to invest in innovation techniques of unskill-biased technologies and customize their production facilities within developed economies \cite{li2010multinational}.
+
+
+\subsection{Statistical Models within Machine Learning}
+
+\hspace{20pt}Most works in Economics focus on the application of traditional statistical methods. Today, innovative methods within Artificial Intelligence (AI) like Machine Learning (ML) have transformed the way people live. Netflix's show recommendations, Instagram's likable posts, Apple smartwatch that tracks health, and Siri's voice-recognition system that responds to user's commands are a few examples of how ML has made our lives easier. Nevertheless, many economists have not embraced this new and innovative technology. Unlike the standard econometric models, the predictive algorithms that make Siri smarter over time cannot answer questions about correlation and causation. However, when it comes to making predictions, the existing methods tend to "over-fit" the data sample and make flawed generalizations of new and unseen data. Hence, this focus on the predictions' accuracy is where machine learning methods play an essential role.
+
+Machine Learning models can minimize the forecasting error by trading off bias and variance and handling vast amounts of data focusing on prediction problems. A study conducted on predicting corporate bankruptcy implemented Lasso and Ridge regression to design a model for an extensive data set of 2032 non-bankrupt firms and 401 bankrupt firms belonging to the hospitality industry over the period 2010-2012. The algorithms were used because they deal better with multicollinearity and display the ideal properties to minimize the numerical instability due to overfitting \cite{pereira2016logistic}. The model used plenty of variables, and it became essential to identify the most critical variables in a data set. Using Lasso regression allows us to shrink the parameter estimates close to zero or even zero, excluding some of the model variables. Such implementations improve the model's prediction accuracy, leading to Lasso's outperformance against existing statistical methods \cite{wang2018predicting}. Numerous studies widely use the logistic regression method in economics. However, Hosmer and Lemeshow report that although logistic regression copes with many restrictive assumptions of ordinary least squares regression, including linearity, normality, and heteroscedasticity, it cannot handle multicollinearity \cite{hosmer2013applied}. With this concept, Lasso was also used to create a model that ensures economic sustainability by predicting franchisor success or failure based on numerous financial and contractual variables \cite{calderon2017economic}. The model correctly predicted 82.47\% of franchisor survival in the training sample and 81.82\% in the test sample, supporting the model's accuracy.
+
+The feature of variable selection is crucial in some sensitive areas such as medicine. For instance, in epidemiology, it has been used to detect collective exposure from a pool of candidate variables diagnosed with Hepatitis B. Implementing the LASSO regression technique in this study helped detect the crucial factors that resulted in the infection, and intensive simulations were used to compare this method with previously researched methods\cite{guo2015improved}. LASSO can also be used to implement models with high-dimensional data and hence reduce the amounts of computation. To identify the risk of disease recurrence and the benefit of adjuvant chemotherapy for patients who have had surgery for stage II colon cancer, Zhang built a model using the LASSO regression from the high-dimensional microarray data \cite{zhang2013prognostic}. Another model utilized the LASSO regression for selecting variables from multiple factors that influence energy consumption in residential buildings \cite{satre2019investigating}. Another crucial application aligns with climate change, which is currently one of the most critical global concerns. Household Carbon Emissions (HCEs) have contributed significantly to the rise in CO2 levels in the atmosphere. There are many factors of HCEs; however, a clear understanding of the driving factors achieved through LASSO regression would be critical for policymakers to rank the factors according to their importance and make required modifications to their policies \cite{shi2020prioritizing}. With the amount of data and problems increasing globally, it is worth noting that setting our aims high and resolving everything might not be a great tactic. However, what could help is identifying the pressing issues and finding solutions to it, and Lasso regression can be useful for such implementations.
+
+
+\section{Method of Approach}
+\label{sec:method}
+
+\hspace{20pt}The project's objective is to create a panel-data analysis through the years 2005 - 2015 for 40 different developed and developing countries (20 each) to understand how skill-biased technological changes and globalization affect income-inequality within countries. The findings will help pave a way to answer how income inequality in different countries affects the world's income inequality. We know that the 40 countries we have chosen might not represent the entire global economy due to feasibility issues. However, the SBTC and globalization have positively influenced the current economic trends within these countries and will narrow down our findings. Our overall goal is to argue that it is high time we start thinking about what level of inequality is acceptable and what effect does this widening gap between the rich and the poor across the globe have on economic growth and prosperity. 
+
+\subsection{Data Preparation}
+\hspace{20pt}The first and foremost step for this project is to list the developed and developing countries that will be used for our research. Gross Domestic Product (GDP) per capita, which is the measure of all the goods and services produced in a country in one year, is used widely in economics to distinguish between developing and developed countries.
+
+The International Monetary Fund (IMF) ranks these countries as developing and developed countries according to their 2019 GDP data, and the list was compiled through World Population Review. To have a more comprehensive global economy angle, we have chosen countries representing North and South America, East and South Asia, Europe, Oceania, and Africa that have been included in the table below:
+
+ \begin{center}
+     
+
+ \begin{tabular}{||c | c | c ||} 
+    \hline
+ \textbf{Developed Nations } & \textbf{Developing Nations} \\ [0.5ex] 
+ \hline\hline
+ United States & China \\ 
+ \hline
+ Canada & India  \\
+ \hline
+ Germany  & Brazil \\
+ \hline
+ Spain & Russia \\
+ \hline
+ United Kingdom & Nigeria  \\
+  \hline
+  France& South Africa \\
+ \hline
+ Italy & Algeria \\
+ \hline
+ Greece & Bangladesh \\
+ \hline
+ Japan & Croatia  \\
+  \hline
+ Chile & Indonesia  \\
+ \hline
+ Netherlands& Argentina \\
+ \hline
+ Norway & Malaysia  \\
+ \hline
+ Sweden & Turkey \\
+ \hline
+ Singapore& Poland  \\
+ \hline
+ Switzerland & Nepal \\
+ \hline
+ Luxembourg & Ethiopia  \\
+ \hline
+ Hongkong & Hungary  \\
+  \hline
+ Saudi Arabia & Columbia \\
+  \hline
+  Taiwan & Equador  \\
+ \hline
+  New Zealand & Morocco  \\
+ \hline
+  South Korea& Qatar \\ [1ex] 
+ \hline
+\end{tabular}
+ \end{center} 
+
+\subsection{Dependent and Independent Variables}
+
+\hspace{20pt}Understanding the gap between the rich and the poor is the first step towards figuring out income inequality. Hence, the next step is to identify the variables that we will use to perform the analysis. The dependent variable will be a measure of inequality, and the independent variables include indicators that measure skill-biased technological changes and globalization. A detailed overview of these variables is included in this section.
+
+\subsubsection{Dependent Variable}
+
+\underline{\textbf{GDP per capita}}: The Gross Domestic Product (GDP) is one of the most important determinants of a country's economic progress. A country's GDP accounts for the total value of goods and services produced within a country's borders during a specific period. Breaking down this output and dividing it by a country's population leads us to GDP per capita. The metric shows how much economic production value can be accounted to the citizens of the country. Furthermore, it helps with a better analysis of the average living standards and well-being when comparing countries. A citizen is supposed to be doing well financially when they have acceptable living standards, which can be accounted for through their income. Multiple studies support the hypothesis that there exists a linear relationship between income inequality and the annual GDP growth rate \cite{luan2017relationship}. A study conducted by OECD indicates that the Gini Coefficient which is another popular measure of income inequality for countries says little about who has benefited or lost from the economic trends \cite{causa_serres_ruiz_2014}. We will acquire the GDP per capita data from the World Bank's website.
+
+\subsubsection{Independent variables that influence Skill-Biased Technological Changes:}
+
+\begin{enumerate}
+\item \underline{\textbf{Potential Scientists and Engineers per Million Population}}: This variable is used as an indicator to calculate the number of highly educated human resources available in a given country. People in these positions are experts in applying scientific and technical knowledge and are usually collectively regarded as a nation’s highly qualified workforce and are paid handsomely for their work. We will access this data from UNESCO’s (United Nations Educational, Scientific and Cultural Organization) database.
+
+\item \underline{\textbf{Expenditure on Research and Development (R&D)}}: A country working to innovate and produce new technologies is most likely to spend a significant sum on its research and development sector. Companies in the industrial, technological, health care and pharmaceutical sectors usually have the highest levels of R&D expenses [Investo]. These industries are also the ones to be most impacted by skill-biased technological changes. To gain competitive advantage and economies of scale, the countries and firms have an incentive to provide innovative and efficient products or services that will gain recognition at the national and international markets. Hence, they tend to invest a lot within R&D. The data for R&D (as a percent of GDP) is accessible from the World Bank's database.
+
+\item \underline{\textbf{High Technology Exports}}: High-technology exports are products that have an R&D intensity. Such exports include aerospace, computers, pharmaceuticals, scientific instruments, electrical machinery etcetera. Implementation of these technologies makes the production process efficient on the one hand, and on the other hand, the operation of such technologies takes away low-level jobs and instead favors more skilled jobs. We will acquire the data set for this variable from the World Bank's database .
+
+\item \underline{\textbf{Number of Patents}}: Patent is an exclusive right granted by the government to an investor interested in manufacturing, using, or selling an invention for a certain number of years. Countries tend to collaborate to influence their technological advancements. This globalization of innovation is a means of gaining competencies abroad lacking at home, rather than exploiting home technological strengths. The empirical findings also indicate that the intensity of globalization of innovation is higher in the multidisciplinary country–industry pairs who compete internationally in trade \cite{causa_serres_ruiz_2014}. We will access the required data on patents from the World Intellectual Property Organization (WIPO), WIPO Patent Report.
+
+\item \underline{\textbf{Expenditure on Education}}: Education is an essential identifier of economic growth. Educated citizens have access to a wide range of opportunities compared to those who are not, and it becomes easier for them to adapt to the changing environment. Broad availability of quality education is a foundation for future training as people transition to new jobs \cite{international2010skilled}. One of the best predictors of an individual’s income is educational attainment, hence a nation’s strategic policies towards investment in education could equip the skills required for the jobs of today and tomorrow \cite{mayer2010relationship}. We will access the data for a country’s expenditure from the World Bank’s database.
+
+\item \underline{\textbf{Human Capital Return on Investment (ROI)}}: According to the human capital theory, a worker's productivity is primarily based on the knowledge and skills resulting from an investment process in human capital \cite{becker2009human}. A high productivity level of the worker leads to high wages. It is within the employer's interests to improve its capital quality by investing in its employees' education and experience, creating economic value for both employees and the economy. Because of the storing relationship between economic growth and Human Capital, business firms use the Human Capital ROI metric to evaluate the workforce's financial value against the money that has been spent on them, including salary and benefits. We will acquire this from the World Bank's database.
+
+\end{enumerate}
+\subsubsection{Independent variables that influence Globalization}
+
+\begin{enumerate}
+
+\item \underline{\textbf{Number of Exports and Imports}}: A country's imports and exports have a massive role in influencing the GDP per capita. It also affects the country's exchange rate, inflation rate, and interest rates. With more and more countries being open towards free trade, the consumers from all these countries can enjoy low-prices and various goods and services that encourage economies to involve more in import and export activities. Critics argue that such activities affect employment by reducing jobs within the countries. Using these variables individually in our analysis will help us identify how expensive or beneficial this shift can be for our workers. We will access this data from the World Bank's database.
+
+\item \underline{\textbf{Trade-to-GDP Ratio}}: The more globalized a country is, the more it is involved in trade with different countries. The trade-to-GDP ratio is the most frequently used indicator of international transactions' importance relative to domestic wealth creation. It is the average share of exports and imports of goods and services in GDP \cite{organisation2010measuring}. For some of our chosen developed economies, we will be accessing this data from OECD's (Organisation for Economic Co-operation and Development) database. For our developing countries, we will access the data from OurWorldinData's database.
+
+\item \underline{\textbf{Foreign Direct Investment}}: A foreign direct investment (FDI) happens when a business firm or individual in one country shows business interests in another country. Such interest is specifically essential for developing and emerging economies that do not have sufficient funding to expand their businesses. FDI also brings technological expertise within various industries that influences economic growth. In 2017, developing countries received \$671 billion, or 47\% of total global FDI. Investments rose 9\% in developing Asia, which received \$476 billion \cite{nachum2001united}. The recipient countries see growth in jobs and standard of living. Few consequences of FDIs significant to this thesis include trade deficits and disruption of domestic business practices, which reduces jobs. We will be accessing World Bank's FDI database for our listed developing and developed economies for further analysis.
+
+\item \underline{\textbf{Economic Freedom}}: In an economically free society, individuals have the freedom to produce, trade, consumer, and invest in any way they desire without any government intervention. The Economic Freedom Index, published by The Heritage Foundation, documents the positive relationship between economic freedom and various positive social and economic goals. This index is based on the four pillars of freedom (Rule of Law, Government Size, Regulatory Efficiency, and Open Markets) and hence will give us an in-depth analysis of a country's economic and political situation \cite{miller20102010}.
+
+\item \underline{\textbf{Transportation}}: Access to modern transportation systems has made it easier for economies to trade and fueled the globalization process. Shipping goods and services over the ocean have been convenient due to decreased cargo costs, and commercial jets and railways have further reduced the distance between countries. Since transportation systems are now convenient, it gives multinational corporations an incentive to invest in industries around the globe. Transportation has been an essential driver of globalization, and hence data on air and railway transports have been collected from the World Bank database. For merchant marine (fleet) data, we acquire it from UNCTAD (United Nations Conference on Trade and Development).
+
+\end{enumerate}
+
+\subsection{Data Analysis Tools and Techniques}
+\hspace{20pt}The data collection procedure will lead us to have numerous bulky data sets, and it is beyond human capacity to analyze these data sets within a short period. We come back to the wonders of automation and require our machines to learn how to process the data and draw inferences from it- this is Machine Learning.
+
+We will be implementing our model in Python, a high-level programming language. Python provides several packages that help with data handling, including $sci-kit$, $Matlab$, and $NumPy$. However, our program's fundamental essence lies within the realms of Machine Learning, a subset of Artificial Intelligence. Machine Learning involves making a computer perform a specific set of tasks without having humans do explicit programming. In other words, it is based on the idea that systems can make inferences from an existing data set, learn the signals within the data and use it on new data sets to make decisions with minimal human intervention. There is a magnificent amount of data in the world, and it is beyond human capacity to handle all of this data and achieve results.
+
+\subsubsection{3.3.1 Machine Learning}
+
+\hspace{20pt}Machine learning processes have helped developers create automated systems for various industries that provide fast and efficient services. A few examples of such applications include online recommendation systems at Amazon or Netflix, tracking location and costs for modern transportation services like Uber, automated email responses etcetera. Although these are applications from different areas, what remains common between them is that these systems pay attention to the users' previous activity and use that information to make relevant future decisions. While all of the above examples provide comfort to the users, we aim to use the concepts within Machine Learning to derive essential insights regarding SBTC and globalization from our data sets. When models are exposed to new unseen data, they can adapt by learning from the existing patterns and produce reliable results. Hence, this thesis aims to achieve findings that could potentially be used in future models to predict the future of the world's economy with the current trends and take action on time.
+
+Machine learning uses algorithms to learn from the data set and make useful predictions. The sci-kit learn package in Python provides access to different algorithms that includes supervised and unsupervised learning. Supervised learning is a machine-learning algorithm where we infer from labeled training data. On the other hand, unsupervised learning deals with data with no labeled outputs and helps find unknown data patterns. In our thesis, we use the supervised learning approach as our data sets are labeled.
+
+\subsubsection{3.3.2 Techniques within Machine Learning}
+
+The purpose of every model is different. Machine Learning provides multiple techniques that can be implemented to accomplish the goals of the model. So, it is important to choose the right kind of estimator. Below is a flowchart designed by sci-kit that provides a rough guide to the users, including a pathway to solve their problems.
+
+\begin{figure}[htpb]
+    \centering
+\includegraphics[scale=0.7]{image1.png}
+\caption{
+        Sci-Kit Learn Algorithm Cheat Sheet \cite{scikit-learn}. 
+    }
+    \label{fig:basics AFM sketch}
+\end{figure}
+\subsubsection{3.3.3 Regression}
+
+According to our predictions and the flowchart, we have planned to implement the techniques of Regression within our model. Regression analysis aims to describe how changes within independent variables affect our dependent variable. Upon implementation, we can identify which variables we have chosen are statistically significant and what role each variable plays in affecting our dependant variable (GDP per capita). Based on our findings, we may have to control for each variable to analyze the impact of the specific independent variable on our dependant variable, and Regression allows us to do so.
+
+\subsubsection{3.3.4 Special Kind of Regression Technique}
+
+\hspace{20pt}Linear Regression, one of the most popular kinds of regression, has some limitations. One of the main limitations is that it assumes a linear or straight-line relationship between the dependent and the independent variables. However, in real-world data, this is rarely a case. The other limitations are overfitting and multicollinearity, which affect the accuracy of our results. Overfitting occurs when we assume our trained model is 99\% accurate, but when we feed new “unseen” data to our model, the accuracy goes down. It indicates that our model does not generalize well when we feed new data to it. On the other hand, multicollinearity is when there is a strong correlation between our independent variables. In this thesis, we argue that SBTC and Globalization go hand-in-hand; hence it is simple to conclude that their variables are correlated. For instance, the increase in high-tech exports within SBTC leads to a higher trade-to-GDP ratio within Globalization. Hence, if the correlation between the variables is high, it can cause problems to our model and lead us to incorrect conclusions. To avoid these prominent issues, we switch to a particular kind of regression within Machine Learning: LASSO Regression.
+
+\subsubsection{3.3.5 LASSO Regression}
+
+\hspace{20pt}LASSO Regression (Least Absolute Shrinkage and Selection Operator) is a regression analysis method that performs regularization (helps with overfitting) and variable selection (identifying which variables are most important). It helps in enhancing the prediction accuracy of the statistical model. When we have multiple independent variables, this regression enables us to regularize, meaning shrink coefficients towards 0. This approach makes it better to work with new kinds of data sets, thus helping with prediction. The method can also reduce the variability and determine which of our independent variables/predictors are the most important, and hence it is essential for feature selection.
+
+In LASSO, the algorithm's goal is to minimize all coefficients' size by introducing a penalty called L1 or lambda. The larger the penalty, the further the coefficients are shrunk towards zero. The equation is calculated as: Residual Sum of Squares + $\lambda$ $*$ (Sum of the absolute value of the magnitude of coefficients) and it represented below mathematically:
+\begin{equation} \label{eq:1}
+    \sum_{i=1}^{n}(y_i - \sum_{j}^{}x_{ij}\beta_{j})^2 + \lambda\sum_{j=1}^{p}|\beta_{j}|
+\end{equation}
+
+So the first part of the equation \ref{eq:1} refers to residual squares (commonly used in linear regression), the new part is the penalty function that has been introduced using absolute values. For this thesis, we will be implementing this model using the LASSO regression model in the sci-kit tool. A snippet of the code is given below: 
+
+\begin{verbatim} 
+from sklearn import linear_model 
+reg = linear_model.Lasso(alpha=0.1)
+\end{verbatim}  
+
+We assume that this implementation will lead us to valuable findings (for instance, the most important variables within SBTC and Globalization) regarding the income inequality gap within countries. If we do not get the desired results, we will lean towards implementing the other two particular kinds of regression: Ridge and Elastic Net, and see which one fits our data set.
+
+\subsection{Data Visualization: Bringing it all together}
+
+\hspace{20pt}This senior thesis aims to incorporate data visualization using visual elements like charts and heat maps to communicate our findings. A good visualization will help tell an easy-to-understand story, and with our visualization tools, we aim to look at the trends and outliers that will further help derive insights crucial to the topic.
+
+There are multiple libraries in Python that will help us in visualizing our data. In this thesis, we will be using Matplotlib and Plotly. Matplotlib is the most popular data visualization library of Python and is a 2D plotting library. It has a versatile visualization library and is easy to use. The library enables us to create plots, bar charts, histograms, scatter plots, pie charts, etcetera. Plotly, on the other hand, is a web-based data visualization toolkit. It has a great Application Programming Interface (API) that makes it convenient to use. Some unique functionalities of Plotly include dendrograms and 3D charts along with scattered plots, contour plots, line charts, bar charts, etcetera. Using Plotly will help us in visualizing our results from the implementation of the sci-Kit learn regression techniques. Based on the results that we get, we can make inferences from our data regarding how SBTC and Globalization play a crucial role in affecting income inequality.
+
+\section{Evaluation Strategy}
+\label{sec:evaluate}
+
+\hspace{20pt}Within machine learning, it is significant to evaluate the performance of a data mining technique. There are so many techniques that could be used to implement the model, and so we need to justify why our method, the Lasso Regression technique, is the most suitable for this thesis. A study conducted to evaluate Lasso regression on the Genetic Analysis Workshop's unrelated samples concluded that the Lasso Regression outperformed Linear Regression. The model also allowed to pick specific gene values that had a high impact on their model \cite{guo2011evaluation}.
+
+For the evaluation of the Lasso Regression algorithm, we will be creating a function that will calculate the Root-Mean-Square (RMS) error. It is often used to measure the difference between the value predicted by the model and the values observed in real. If $\hat{y_{i}}$ where the observed value for the $i$th observation and $y_i$ was the predicted value, then the residuals would be calculated using the equation below:
+
+\begin{equation} \label{eq:1}
+      RMS Errors = \sqrt{\frac{\sum_{i=1}^{n}(\hat{y_{i}}- y_{i})^2}{n}}
+\end{equation}
+
+
+The RMS errors in equation \ref{eq:1} are also a good measure of accuracy, but only to compare forecasting errors of different models for a particular variable and not between variables, as it is scale-dependent \cite{neill2018chapter}. Hence, our next evaluation strategy that we will take is to take our labeled data, split it into a training and testing set. We will undergo this process with a ratio of 70-80 percent for training and 20-30 for the testing. By feeding the training data to our model, our ML system will be trained to see the existing patterns within the data. By using the testing set, we will evaluate the prediction quality of our trained model. Using various metrics, the ML system will evaluate the predictive performance by comparing predictions on the evaluation data set with real values. Hence, the fundamental goal of using an ML system is to generalize beyond the model and to make better future predictions.
+
+\section{Research Schedule}
+\label{sec:plan}
+
+\hspace{20pt}Table \ref{tab:table1} proposes the work schedule for the research and implementation of the LASSO Regression Model to derive insights regarding income inequality within our chosen list of developed and developing countries. The research includes further research of the regression technique after the proposal defense to ensure that the model is compatible with our expected findings. We will then proceed to clean our data sets if required and eventually implement the algorithm in Python. We will then evaluate our model with the techniques we have proposed. Once we get positive results regarding the accuracy, the next step will be to visualize the results. The last step would be to document the results in the final document. 
+
+\begin{table}[h!]
+\centering
+ \begin{tabular}{||c | c | c ||} 
+ \hline
+ \textbf{Task} & \textbf{Begin Date} & \textbf{End Date} \\ [0.5ex] 
+ \hline\hline
+ Proposal Defense Preparation & Late Oct. & Early Nov.\\ 
+ \hline
+ Thesis Chapters Outline & Early Nov. & Late Nov.\\
+ \hline
+ Thesis Chapters Draft & Late Nov. & Early Dec.\\
+ \hline
+ LASSO Regression Research & Mid-Dec. & Early Jan.\\
+ \hline
+ Thesis Writing & Early Jan. & Mid-March\\
+ \hline
+ Data Processing & Mid Jan. & Late Jan.\\
+ \hline
+ Model Implementation & Late Jan & Late Feb.\\
+ \hline
+ Model Testing & Early March & Mid March \\
+ \hline
+ Thesis Defense Preparation & Early April & Mid April\\ [1ex] 
+ \hline
+ \end{tabular}
+ \caption{\label{tab:table1}Proposed Work Schedule}
+\end{table}
+
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+\hspace{20pt}Our economies have made immense progress in innovation and globalization, and we keep aiming for higher. However, growth comes with a cost, not just the cost of switching to advanced technology and trade opportunities, but the livelihoods of millions of people who do not have the skills to transition swiftly with the change. This senior thesis project aims to put economies' leaders to think about the acceptable level of inequality. Is it acceptable that we live in a world where the rich people take benefits and keep assembling money in their massive bank accounts and spend lavishly while the poor, on the other hand, have to worry about their expenses for necessities? Is it acceptable that the rich swim in a pool of champagne while the poor cry in tears? In this project, we use one of humankind's innovations, Machine Learning, to portray the current economic scenarios and create awareness of how the world is running on the wrong track. If only we prioritized the global economic prosperity rather than success for those on the higher end of the spectrum, we could use "Technology for a change," a change for a better society, country, economy, and the world.
+ 
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+\unnumberedchapter{Bibliography} % Title of the unnumbered chapter
+
+\bibliography{preamble/bibliography} % The references information are stored in the file named "bibliography.bib"
+
+
+
+
+\end{document}  
