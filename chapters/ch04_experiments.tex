@@ -1,7 +1,21 @@
 \chapter{Experimental Results} 
 \label{ch:experiments}
 
-This chapter should describe your experimental set up and evaluation. It should also produce and describe the results of your study. Possible section titles are given below.
+\section{Brief Overview}
+After successfully implementing the LASSO model in python, I was able to run the regression model and conduct individual analyses on all the countries. I implemented the LASSO model for each country by using a built-in filter function that checks every element of the iterable, whether true or false, based on the given criteria. Here the criteria we used was the name of the country. A snippet of the code is shown in figure \ref{fig1} below:
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.6]{images/CodeSnippet1.png}
+\caption{
+        Filtering the dataset
+    }
+\label{fig1}
+\end{figure}
+
+ 
+An individual analysis was essential because if LASSO were conducted on all the countries simultaneously, it would have compounded the results. For instance, if we were testing the variables that affect the GDP per capita growth for the United States, then the model will intake the independent variables for the US and that for the other countries. As a result, this would diminish the model’s accuracy, so filtering the data was an important step.
+
+This research paper aims to determine what are the most important indicatos of economic development for each of the countries and how do they relate to SBTC and globalization. As discussed earlier in the literature review, the Kuznets curve shows that as economies experience economic development, income inequlity tends to increase. At low levels of development, the majority of the population has relatively low income, so the income inequality is low. As the economy develops, few people get higher rewards, and the income gap widens. With further development, the economies hit a point of economic growth, where the income inequality tends to fall, thus forming an inverted U-shaped curve. The dependant variable for this analysis, GDP per capita growth, is identified to have a linear relationship with income inequality []. With our analysis, I was able to identify each country’s critical factors that promote GDP per capita and thus increase income inequality. The research for each of the categories of countries: High-Income Countries (HICs), Upper-Middle-Income Countries (UMICs), and Lower-Middle Income (LMICs) is discussed below.
 
 \section{Experimental Design}
 
