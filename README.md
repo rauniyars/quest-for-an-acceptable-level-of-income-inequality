@@ -44,8 +44,8 @@
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
-    <li=
-      <a href="#quest for the level of income inequality">About The Project</a>
+    <li>
+      <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -69,7 +69,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Quest for the level of income inequality
 
 This project comprises of the senior thesis presented to the Department of Computer Science at Allegheny College. It comprises of the implementation of a machine learning model using the LASSO regression to study the impact of Skill-Biased Technological Change on Income Inequality within High-Income Countries (HICs), Upper-Middle Income Countries (UMICs), and Lower-Middle-Income Countries (LMICs).
 
@@ -165,3 +165,4 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 * []()
 * []()
 * []()
+
