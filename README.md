@@ -99,11 +99,9 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-Installing `Python`
-* python
-  ```sh
-  python link huh
-  ```
+Installing `Python` (
+* [Download Python](https://www.python.org/downloads/)
+ 
 
 ### Installation 
 
