@@ -115,8 +115,7 @@ Installing Python
    ```sh
    pip install pandas
    ```
-
-
+The libraries 'NumPy', 'Matplotlib', and 'sci-kit learn', have been imported by using the 'import' statements in the python files in the 'src' folder.
 
 <!-- USAGE EXAMPLES -->
 ## Running the Program
