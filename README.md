@@ -99,21 +99,21 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-Installing from PyPI
-* npm
+Installing Python
+* python
   ```sh
-  pip install pandas
+  python link huh
   ```
 
-### Installation
+### Installation 
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone git@github.com:Allegheny-Computer-Science-600-F2020/project04-thesis-rauniyars.git
    ```
-2. Install NPM packages
+2. Install 'pandas' library
    ```sh
-   npm install
+   pip install pandas
    ```
 
 
