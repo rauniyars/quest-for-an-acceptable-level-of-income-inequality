@@ -119,6 +119,16 @@ Installing Python
 
 
 <!-- USAGE EXAMPLES -->
+## Running the Program
+
+The source code consists of two python files: 'lasso.py' and 'lambda.py'. The python file 'lasso.py' contains the code for the implementation of the LASSO regression model. It also constitutes of code that generates the plots showing the value of coefficients of the independant variable for each of the countries. The second python file 'lamda.py' constitutes of the code for the k-fold cross validation for the regularization parameter $\lambda$
+
+_For more examples, please refer to the [Documentation](https://example.com)_
+
+
+
+
+<!-- USAGE EXAMPLES -->
 ## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
