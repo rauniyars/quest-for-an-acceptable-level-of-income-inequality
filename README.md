@@ -121,7 +121,16 @@ Installing Python
 <!-- USAGE EXAMPLES -->
 ## Running the Program
 
-The source code consists of two python files: 'lasso.py' and 'lambda.py'. The python file 'lasso.py' contains the code for the implementation of the LASSO regression model. It also constitutes of code that generates the plots showing the value of coefficients of the independant variable for each of the countries. The second python file 'lamda.py' constitutes of the code for the k-fold cross validation for the regularization parameter $\lambda$
+The source code consists of two python files: 'lasso.py' and 'lambda.py'. The python file 'lasso.py' contains the code for the implementation of the LASSO regression model. It also constitutes of code that generates the plots showing the value of coefficients of the independant variable for each of the countries. The second python file 'lamda.py' constitutes of the code for the k-fold cross validation for the regularization parameter $\lambda$. Upon succcessful installation of python3 and pandas, the files will run using the following commands:
+
+* command for running the file lasso.py
+  ```sh
+  python3 lasso.py
+  ```
+* command for running the file lasso.py
+  ```sh
+  python3 lambda.py
+  ```
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
