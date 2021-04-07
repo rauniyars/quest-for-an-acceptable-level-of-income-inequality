@@ -45,7 +45,7 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#project-overview">Project Overview</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -68,10 +68,10 @@
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- PROJECT OVERVIEW -->
+## Project Overview
 
-This project comprises of the senior thesis presented to the Department of Computer Science at Allegheny College. It comprises of the implementation of a machine learning model using the LASSO regression to study the impact of Skill-Biased Technological Change on Income Inequality within High-Income Countries (HICs), Upper-Middle Income Countries (UMICs), and Lower-Middle-Income Countries (LMICs).
+This project comprises of the senior thesis presented to the Department of Computer Science at Allegheny College. It includes the implementation of a machine learning model, 'LASSO' (Least Absolute Shrinkage and Selection Operator) regression, to study the impact of Skill-Biased Technological Change on Income Inequality within High-Income Countries (HICs), Upper-Middle Income Countries (UMICs), and Lower-Middle-Income Countries (LMICs).
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -99,7 +99,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-Installing Python
+Installing `Python`
 * python
   ```sh
   python link huh
@@ -107,11 +107,11 @@ Installing Python
 
 ### Installation 
 
-1. Clone the repo
+1. Clone the repository
    ```sh
    git clone git@github.com:Allegheny-Computer-Science-600-F2020/project04-thesis-rauniyars.git
    ```
-2. Install 'pandas' library
+2. Install `pandas` library
    ```sh
    pip install pandas
    ```
@@ -120,13 +120,13 @@ The libraries `NumPy`, `Matplotlib`, and `sci-kit learn`, have been accessed by 
 <!-- USAGE EXAMPLES -->
 ## Running the Program
 
-The source code consists of two python files: `lasso.py` and `lambda.py`. The python file `lasso.py` contains the code for the implementation of the LASSO regression model. It also constitutes of code that generates the plots showing the value of coefficients of the independant variable for each of the countries. The second python file 'lamda.py' constitutes of the code for the k-fold cross validation for the regularization parameter $\lambda$. Upon succcessful installation of python3 and pandas, the files will run using the following commands:
+The source code consists of two python files: `lasso.py` and `lambda.py`. The python file `lasso.py` contains the code for the implementation of the LASSO regression model. It also constitutes of code that generates the plots showing the value of coefficients of the independant variable for each of the countries. The second python file `lamda.py` constitutes of the code for the k-fold cross validation for the regularization parameter $\lambda$. Upon succcessful installation of python3 and pandas, the files will run using the following commands:
 
-* command for running the file lasso.py
+* Command for running the file `lasso.py`
   ```sh
   python3 lasso.py
   ```
-* command for running the file lasso.py
+* Command for running the file `lasso.py`
   ```sh
   python3 lambda.py
   ```
