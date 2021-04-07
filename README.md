@@ -122,7 +122,7 @@ The source code consists of two python files: `lasso.py` and `lambda.py`. The py
 
 * Command for running the file `lasso.py`
   ```sh
-  python3 lasso.py
+  python3 lasso.py 	$\lambda \Lambda$
   ```
 * Command for running the file `lasso.py`
   ```sh
@@ -144,7 +144,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- ROADMAP -->
-## Roadmap
+## Roadmap 
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
 
