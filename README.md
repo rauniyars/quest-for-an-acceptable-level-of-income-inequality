@@ -69,7 +69,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Quest for the level of income inequality
+## About The Project
 
 This project comprises of the senior thesis presented to the Department of Computer Science at Allegheny College. It comprises of the implementation of a machine learning model using the LASSO regression to study the impact of Skill-Biased Technological Change on Income Inequality within High-Income Countries (HICs), Upper-Middle Income Countries (UMICs), and Lower-Middle-Income Countries (LMICs).
 
@@ -80,11 +80,15 @@ Here's a blank template to get started:
 `github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
 
 
+
 ### Built With
 
-* []()
-* []()
-* []()
+* [Python3](https://www.python.org/)
+* Libraries in Python:
+  * [Pandas](https://pandas.pydata.org/)
+  * [NumPy](https://numpy.org/)
+  * [Matplotlib](https://matplotlib.org/)
+  * [scikit-learn](https://scikit-learn.org/stable/)
 
 
 
@@ -165,4 +169,5 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 * []()
 * []()
 * []()
+
 
