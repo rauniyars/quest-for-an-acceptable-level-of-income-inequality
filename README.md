@@ -117,6 +117,7 @@ Initially, the sci-kit learn library was used to plot the trends within the GDP 
 <p align="center">
   <a href="https://github.com/github_username/repo_name">
     <img src="images/panel_data_graph.png" alt="Logo" width="550" height="420">
+    <img src="images/US.png" alt="Logo" width="550" height="420">
   </a>    
   </p>
 </p>
