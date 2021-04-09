@@ -132,7 +132,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- CONTACT -->
 ## Contact
 
-Your Name - Sweta Rauniyar (rauniyars@allegheny.edu) - email
+Author: Sweta Rauniyar
+
+Email: (rauniyars@allegheny.edu) 
 
 Project Link: [https://github.com/Allegheny-Computer-Science-600-F2020/project04-thesis-rauniyars](https://github.com/Allegheny-Computer-Science-600-F2020/project04-thesis-rauniyars)
 
