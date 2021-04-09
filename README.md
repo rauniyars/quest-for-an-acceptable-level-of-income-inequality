@@ -61,7 +61,7 @@ Here's a blank template to get started:
 
 ### Built With
 
-* [Python3](https://www.python.org/)
+* [Python 3.0](https://www.python.org/)
 * Libraries in Python:
   * [Pandas](https://pandas.pydata.org/)
   * [NumPy](https://numpy.org/)
