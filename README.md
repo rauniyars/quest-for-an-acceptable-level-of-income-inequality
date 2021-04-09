@@ -191,7 +191,7 @@ The source code consists of two python files: `lasso.py` and `lambda.py`. The py
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The scikit-learn library was used to plot the trends within the GDP per capita growth 
 
 <br />
 <p align="center">
