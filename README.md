@@ -7,10 +7,6 @@
     <img src="images/logo.png" alt="Logo" width="220" height="80">
   </a>
 
-<p align="center">
-    Quest for an Acceptable Level of Income Inequality: A Comparative Analysis of Implications of Skill-Biased Technological Change and Globalization between High-Income, Upper-Middle-Income, and Lower-Middle-Income Coutries
-    <br />
-
   <h4 align="center">Quest for an Acceptable Level of Income Inequality: A Comparative Analysis of Implications of Skill-Biased Technological Change and Globalization between High-Income, Upper-Middle-Income, and Lower-Middle-Income Coutries</h4>
 
   <p align="center">
