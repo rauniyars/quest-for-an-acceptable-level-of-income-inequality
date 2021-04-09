@@ -196,7 +196,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 <br />
 <p align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/panel_data_graph.png" alt="Logo" width="550" height="280">
+    <img src="images/panel_data_graph.png" alt="Logo" width="550" height="350">
   </a>    
   </p>
 </p>
