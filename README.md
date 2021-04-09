@@ -124,6 +124,16 @@ Initially, the sci-kit learn library was used to plot the trends within the GDP 
 To understand the significant variables that prompt these trends, LASSO was used to conduct individual analyses within these countries. I used a total of thirteen variables that represent Skill-Biased Technological Change (SBTC) and Globalization and influence GDP per capita growth. Based on the results I received, I can make inferences from the data regarding how those factors play a crucial role in affecting income inequality. Below are a few graphs that were obtained after running the model:
 
 
+<br />
+<p align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="images/US.png" alt="Logo" width="550" height="420">
+  </a>    
+  </p>
+</p>
+
+
+
 
 <!-- CONTACT -->
 ## Contact
