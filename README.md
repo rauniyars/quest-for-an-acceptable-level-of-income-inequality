@@ -10,7 +10,7 @@
   <h3 align="center">Senior Thesis</h3>
 
   <p align="center">
-    project_description
+    Quest for an Acceptable Level ofIncome Inequality: A Comparative Analysis of Implications ofSkill-Biased Technological Change andGlobalization between High-Income, Upper-Middle-Income, and Lower-Middle-Income Coutries
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
