@@ -122,9 +122,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 <!-- CONTACT -->
 ## Contact
 
-#### Author: Sweta Rauniyar
-
-#### Email: rauniyars@allegheny.edu 
-
-#### Project Link: [https://github.com/Allegheny-Computer-Science-600-F2020/project04-thesis-rauniyars](https://github.com/Allegheny-Computer-Science-600-F2020/project04-thesis-rauniyars)
+Author: Sweta Rauniyar
+Email: rauniyars@allegheny.edu 
+Project Link: [https://github.com/Allegheny-Computer-Science-600-F2020/project04-thesis-rauniyars](https://github.com/Allegheny-Computer-Science-600-F2020/project04-thesis-rauniyars)
 
