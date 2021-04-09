@@ -9,8 +9,6 @@
 
   <h4 align="center">Quest for an Acceptable Level of Income Inequality: A Comparative Analysis of Implications of Skill-Biased Technological Change and Globalization between High-Income, Upper-Middle-Income, and Lower-Middle-Income Coutries</h4>
 
- 
-  
     
   </p>
 </p>
@@ -112,7 +110,6 @@ The source code consists of two python files: `lasso.py` and `lambda.py`. The py
   ```sh
   python3 lambda.py
   ```
-
 
 
 <!-- USAGE EXAMPLES -->
