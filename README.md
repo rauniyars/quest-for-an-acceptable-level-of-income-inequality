@@ -191,7 +191,7 @@ The source code consists of two python files: `lasso.py` and `lambda.py`. The py
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-The scikit-learn library was used to plot the trends within the GDP per capita growth 
+Initially, the sci-kit learn library was used to plot the trends within the GDP per capita growth for each country from 2012 to 2019. The graph showing the trends is shown below:
 
 <br />
 <p align="center">
@@ -200,6 +200,8 @@ The scikit-learn library was used to plot the trends within the GDP per capita g
   </a>    
   </p>
 </p>
+
+To understand the significant variables that prompt these trends, LASSO was used to conduct individual analyses within these countries. I used a total of thirteen variables that represent Skill-Biased Technological Change (SBTC) and Globalization and influence GDP per capita growth. Based on the results I received, I can make inferences from the data regarding how those factors play a crucial role in affecting income inequality. Below are a few graphs that were obtained after running the model:
 
 
 
